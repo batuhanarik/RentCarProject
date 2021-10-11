@@ -3,6 +3,7 @@ using Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,10 +15,10 @@ namespace DataAccess.Concrete.InMemory
         {
             _cars = new List<Car>
             {
-                new Car{Id=1,BrandId=1,ColorId=2,DailyPrice=300,Description="Nice Car"},
-                new Car{Id=2,BrandId=2,ColorId=2,DailyPrice=350,Description="Very Nice Car"},
-                new Car{Id=3,BrandId=2,ColorId=1,DailyPrice=200,Description="Ideal Car"},
-                new Car{Id=4,BrandId=4,ColorId=2,DailyPrice=400,Description="Little Expensive Car :)"}
+                new Car{CarId=1,BrandId=1,ColorId=2,DailyPrice=300,Description="Nice Car"},
+                new Car{CarId=2,BrandId=2,ColorId=2,DailyPrice=350,Description="Very Nice Car"},
+                new Car{CarId=3,BrandId=2,ColorId=1,DailyPrice=200,Description="Ideal Car"},
+                new Car{CarId=4,BrandId=4,ColorId=2,DailyPrice=400,Description="Little Expensive Car :)"}
 
             };
         }
@@ -30,7 +31,7 @@ namespace DataAccess.Concrete.InMemory
         public void Delete(Car car)
         {
             Car carToDelete = null;
-            carToDelete = _cars.SingleOrDefault(c => c.Id == car.Id);
+            carToDelete = _cars.SingleOrDefault(c => c.CarId == car.CarId);
             _cars.Remove(carToDelete);
         }
 
@@ -47,13 +48,23 @@ namespace DataAccess.Concrete.InMemory
         public void Update(Car car)
         {
             Car carToUpdate = null;
-            carToUpdate = _cars.FirstOrDefault(c => c.Id == car.Id);
+            carToUpdate = _cars.FirstOrDefault(c => c.CarId == car.CarId);
 
             carToUpdate.ModelYear = car.ModelYear;
             carToUpdate.DailyPrice = car.DailyPrice;
             carToUpdate.BrandId = car.BrandId;
             carToUpdate.Description = car.Description;
             carToUpdate.ColorId = car.ColorId;
+        }
+
+        public List<Car> GetAll(Expression<Func<Car, bool>> filter = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Car Get(Expression<Func<Car, bool>> filter)
+        {
+            throw new NotImplementedException();
         }
     }
 }
