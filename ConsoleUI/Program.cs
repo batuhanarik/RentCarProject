@@ -21,8 +21,8 @@ namespace ConsoleUI
             //    Console.WriteLine(car.CarId + " " + car.Description);
             //}
 
-            //var car1 = new Car { CarId = 1, BrandId = 3, Description = "Honda Kiyaq", ColorId = 2, ModelYear = -2005, DailyPrice = 166 };
-            //carManager.Add(car1);
+            var car1 = new Car { CarId = 1, BrandId = 3, Description = "Honda Kiyaq", ColorId = 2, ModelYear = -2005, DailyPrice = 166 };
+            carManager.Add(car1);
         }
     }
 }
