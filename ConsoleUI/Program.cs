@@ -21,7 +21,7 @@ namespace ConsoleUI
         private static void CarDetailsTest()
         {
             var carManager = new CarManager(new EfCarDal());
-            foreach (var car in carManager.GetCarDetails())
+            foreach (var car in carManager.GetCarDetails().Data)
             {
                 Console.WriteLine(car.CarName + car.BrandName + car.ColorName + car.DailyPrice);
             }
