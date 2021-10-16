@@ -15,7 +15,7 @@ namespace Business.Constants
         public static string CarNameInvalid= "Car Name Invalid";
         public static string CarListedByBrand = "Cars Listed By Brand";
         public static string CarListedByColor = "Cars Listed By Color";
-
-
+        public static string RentalAdded = "Rental Added";
+        public static string RentalInvalid = "Rental is Invalid.";
     }
 }
