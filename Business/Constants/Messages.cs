@@ -17,5 +17,7 @@ namespace Business.Constants
         public static string CarListedByColor = "Cars Listed By Color";
         public static string RentalAdded = "Rental Added";
         public static string RentalInvalid = "Rental is Invalid.";
+        internal static string CarImageLimitExceeded;
+        internal static string CarImageIsNotExists;
     }
 }
