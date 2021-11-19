@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Core.Entities.Concrete;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -17,7 +19,14 @@ namespace Business.Constants
         public static string CarListedByColor = "Cars Listed By Color";
         public static string RentalAdded = "Rental Added";
         public static string RentalInvalid = "Rental is Invalid.";
-        internal static string CarImageLimitExceeded;
-        internal static string CarImageIsNotExists;
+        internal static string CarImageLimitExceeded="Car Image Limit Exceeded.";
+        internal static string CarImageIsNotExists="Car Imgaes Is Not Exists.";
+        internal static string AuthorizationDenied="Authorization was denied.";
+        internal static string UserRegistered;
+        internal static User UserNotFound;
+        internal static string SuccessfulLogin;
+        internal static string UserAlreadyExists;
+        internal static string AccessTokenCreated;
+        internal static User PasswordError;
     }
 }
