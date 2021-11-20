@@ -19,14 +19,14 @@ namespace Business.Constants
         public static string CarListedByColor = "Cars Listed By Color";
         public static string RentalAdded = "Rental Added";
         public static string RentalInvalid = "Rental is Invalid.";
-        internal static string CarImageLimitExceeded="Car Image Limit Exceeded.";
-        internal static string CarImageIsNotExists="Car Imgaes Is Not Exists.";
-        internal static string AuthorizationDenied="Authorization was denied.";
-        internal static string UserRegistered;
-        internal static User UserNotFound;
-        internal static string SuccessfulLogin;
-        internal static string UserAlreadyExists;
-        internal static string AccessTokenCreated;
-        internal static User PasswordError;
+        public static string CarImageLimitExceeded="Car Image Limit Exceeded.";
+        public static string CarImageIsNotExists="Car Imgaes Is Not Exists.";
+        public static string AuthorizationDenied="Authorization was denied.";
+        public static string UserRegistered="Başarıyla Kayıt Olundu";
+        public static string UserNotFound = "Kullanıcı Bulunamadı.";
+        public static string SuccessfulLogin = "Başarıyla Giriş Yapıldı";
+        public static string UserAlreadyExists="Kullanıcı zaten mevcut.";
+        public static string AccessTokenCreated="Erişim tokeni oluşturuldu.";
+        public static string PasswordError = "Şifre hatalı";
     }
 }

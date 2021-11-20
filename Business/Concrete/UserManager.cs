@@ -40,7 +40,9 @@ namespace Business.Concrete
 
         public IDataResult<User> GetByMail(string email)
         {
-            return new SuccessDataResult<User>(_userDal.Get(u => u.Email == email));
+
+            var result = _userDal.Get(u => u.Email == email);
+            return new SuccessDataResult<User>(result);
         }
 
         public IDataResult<List<OperationClaim>> GetClaims(User user)

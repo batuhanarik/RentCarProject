@@ -10,7 +10,7 @@ namespace Business.ValidationRules.FluentValidation
         {
             RuleFor(c => c.CarName).NotEmpty();
             RuleFor(c => c.CarName).MinimumLength(2);
-            RuleFor(c => c.CarName).Must(StartWithM).WithMessage("Car Name Must Start With A"); // "M"odel X & "M"odel G vb.
+            RuleFor(c => c.CarName).Must(StartWithM).WithMessage("Car Name Must Start With M"); // "M"odel X & "M"odel G vb.
 
 
             RuleFor(c => c.DailyPrice).NotEmpty();
