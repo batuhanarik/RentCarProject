@@ -25,14 +25,6 @@ namespace Business.ValidationRules.FluentValidation
 
             RuleFor(c => c.ModelYear).NotEmpty();
             RuleFor(c => c.ModelYear).GreaterThan(2000);
-
-            
-
-
-
-
-
-
         }
 
         private bool StartWithM(string arg)
