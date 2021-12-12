@@ -44,6 +44,14 @@ namespace WebAPI
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebAPI", Version = "v1.0" });
             });
+
+            services.AddCors(opts => {
+                opts.AddDefaultPolicy(x =>
+                {
+                    x.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+                });
+            });
+
             //services.AddSingleton<ICarService, CarManager>();
             //services.AddSingleton<ICarDal, EfCarDal>();
 
@@ -96,6 +104,7 @@ namespace WebAPI
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "WebAPI v1"));
             }
+            app.UseCors();
 
             app.UseHttpsRedirection();
 
